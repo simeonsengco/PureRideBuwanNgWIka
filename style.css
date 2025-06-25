@@ -1,0 +1,368 @@
+/* style.css */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Gumamit ng Inter font para sa mas mahusay na typography */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Mas magaan na background */
+    color: #333; /* Default text color */
+}
+
+/* Base styles for scroll animation */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition-delay: 0.1s; /* Bahagyang delay para sa animation */
+}
+
+/* Styles when element is visible */
+.scroll-animate.scroll-animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.navigation-bar {
+    height: 8vh; /* Bahagyang mas mataas na navigation bar */
+    background-color: #007bff; /* Kulay asul para sa navigation */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Dagdagan ang espasyo sa pagitan ng mga link */
+    font-size: 1.1rem; /* Bahagyang mas maliit na font size */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Anino para sa navigation bar */
+    border-bottom-left-radius: 15px; /* Rounded corners */
+    border-bottom-right-radius: 15px; /* Rounded corners */
+}
+
+.navigation-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px; /* Padding para sa mga link */
+    border-radius: 10px; /* Rounded corners para sa mga link */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigation-bar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    transform: translateY(-2px);
+}
+
+/* Style for the new music toggle button */
+.music-toggle-button {
+    margin: 0px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #ffc107; /* Dilaw na kulay */
+    color: #333;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-left: 20px; /* Espasyo mula sa navigation links */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.music-toggle-button:hover {
+    background-color: #e0a800; /* Mas madilim na dilaw sa hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.container-home {
+    min-height: 100vh; /* Gamitin ang min-height para sa flexibility */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* I-center ang text */
+    background-image: url('BG1.jpg'); /* Placeholder image for BG1.jpg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Dagdagan ang padding */
+    color: #fff; /* White text for contrast on background image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+.container-home h1 {
+    font-size: 4rem; /* Mas malaking heading */
+    margin-bottom: 15px;
+}
+
+.container-home p {
+    font-size: 1.3rem; /* Mas malaking paragraph text */
+    max-width: 800px; /* Limitahan ang lapad ng text */
+    line-height: 1.6; /* Pagandahin ang line spacing */
+    margin-bottom: 10px;
+}
+
+#primo img {
+    width: 200px;
+    height: auto;
+    max-height: 30vh;
+    border-radius: 50%; /* Gawing bilog ang larawan */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Anino para sa larawan */
+    margin-bottom: 20px;
+}
+
+.scroll-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Gawing column for better stacking on small screens */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem; /* Adjustable font size */
+    background-color: #fdf6e3;
+    padding: 40px 20px; /* Dagdagan ang padding */
+    border-top: 1px solid #eee; /* Ilagay ang border sa itaas */
+}
+
+.scroll-section h2 {
+    font-size: 3rem; /* Malaking heading para sa sections */
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.scroll-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    line-height: 1.5;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #28a745; /* Kulay berde para sa button */
+    color: #fff;
+    border-radius: 25px; /* Mas bilog na button */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Anino para sa button */
+}
+
+button:hover {
+    background-color: #218838; /* Mas madilim na berde sa hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* SECTION 2 */
+#section2 {
+    background-image: url('intra.jpg'); /* Placeholder image for BG1.jpg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Gamitin ang min-height para sa flexibility */
+    display: flex;
+}
+#PRGK{
+    font-family: poppins, sans-serif;
+    font-size: 2rem;
+    color: orange;
+    text-align: center;
+    font-weight: bold;
+}
+#text-section2 {
+    color: #fff; /* White text for contrast on background image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+    font-size: 1.3rem; /* Mas malaking font size */
+    max-width: 800px; /* Limitahan ang lapad ng text */
+    line-height: 1.6; /* Pagandahin ang line spacing */
+}  
+
+
+/* SECTION 3 */
+#IMPORMASYON{
+    background-image: url('library-bg.jpg'); /* Placeholder image for BG1.jpg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Gamitin ang min-height para sa flexibility */
+    display: flex;
+}
+#impormasyon-text{
+    font-family: poppins, sans-serif;
+    font-size: 2rem;
+    color: orange;
+    text-align: center;
+    font-weight: bold;
+}
+#text-section3 {
+    color: #fff; /* White text for contrast on background image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+    font-size: 1.3rem; /* Mas malaking font size */
+    max-width: 1000px; /* Limitahan ang lapad ng text */
+    line-height: 1.6; /* Pagandahin ang line spacing */
+}
+
+/* SECTION 4 */
+#MAKIPAG-UGNAYAN{
+    background-image: url('BackgroundII.jpg'); /* Placeholder image for BG1.jpg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh; /* Gamitin ang min-height para sa flexibility */
+    display: flex;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start vertically */
+    max-width: 1200px;
+    width: 100%;
+}
+
+.contact-info-block {
+    flex: 1;
+    min-width: 300px; /* Minimum width before wrapping */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space below block on smaller screens */
+    margin-left: 20px; /* Space from the left */
+    margin-right: 20px; /* Space from the right */
+    backdrop-filter: blur(2.5px); /* Add blur effect */
+    -webkit-backdrop-filter: blur(2.5px); /* Safari support */
+}
+
+.contact-info-block h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.contact-info-block ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.contact-info-block ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-block ul li .icon {
+    margin-right: 10px;
+    font-size: 1.3rem;
+    color: #28a745; /* Green icon color */
+}
+
+.contact-info-block ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-block ul li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.company-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.company-logos .logo-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-media-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-button .icon {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.social-button.facebook { background-color: #3b5998; }
+.social-button.instagram { background-color: #E1306C; }
+.social-button.tiktok { background-color: #69C9D0; }
+
+.social-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.map-container {
+    flex: 1;
+    min-width: 300px; /* Minimum width before wrapping */
+    height: 450px; /* Fixed height for the map */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.site-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top-left-radius: 15px; /* Rounded corners */
+    border-top-right-radius: 15px; /* Rounded corners */
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+.site-footer a {
+    color: #87CEEB; /* Light blue for footer links */
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #ADD8E6;
+    text-decoration: underline;
+}
